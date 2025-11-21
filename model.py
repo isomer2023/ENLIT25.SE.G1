@@ -204,11 +204,6 @@ def process_all_pvpc_files(data_folder="Data"):
     if all_data:
         combined_df = pd.concat(all_data, ignore_index=True)
 
-        # 保存合并的数据
-        combined_output = data_path / "all_pvpc_data_combined.csv"
-        combined_df.to_csv(combined_output, index=False, encoding='utf-8-sig')
-        print(f"\n所有数据已合并保存到: {combined_output}")
-
         # 显示汇总信息
         print(f"\n数据汇总:")
         print(f"成功处理文件: {processed_files}/{len(pvpc_files)}")
